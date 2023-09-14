@@ -1,0 +1,44 @@
+{
+  "name": "web_crawler_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "nodemon src/server.ts"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "puppeteer": "^21.2.1",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.14.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^3.0.0",
+    "typescript": "^4.9.5"
+  },
+  "author": "yuri-duque",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuri-duque/web_crawler_node.git"
+  },
+  "keywords": [
+    "gym",
+    "node",
+    "typescript",
+    "graphql",
+    "mongodb"
+  ],
+  "bugs": {
+    "url": "https://github.com/yuri-duque/web_crawler_node/issues"
+  },
+  "homepage": "https://github.com/yuri-duque/web_crawler_node#readme"
+
+}
