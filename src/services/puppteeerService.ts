@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer";
+import puppeteer, {Page} from "puppeteer";
 import fs from "fs";
 
 async function init(url) {

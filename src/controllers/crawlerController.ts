@@ -1,6 +1,4 @@
 import { Request, Response, Router } from "express";
-import fs from "fs";
-import client from "https";
 
 import PuppeteerService from "../services/puppteeerService";
 import BahamasService from "../services/bahamasService";
@@ -17,10 +15,14 @@ router.get("/get-images", async (req: Request, res: Response) => {
     const url = BahamasService.url;
 
     const page = await PuppeteerService.init(url);
+
     await PuppeteerService.takeScreenshot(page, "bahamas.png");
+    await BahamasService.selectCidade(page);
+    await PuppeteerService.takeScreenshot(page, "bahamasLocated.png");
 
     res.status(200).send("OK");
   } catch (error) {
+    console.log("error to get images", error);
     res.status(400).send(`ERRO: ${JSON.stringify(error)}`);
   }
 });
